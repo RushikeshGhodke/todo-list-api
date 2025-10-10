@@ -53,3 +53,19 @@ export const registerUser = asyncHandler(async (req, res) => {
             .json(new ApiError(500, "Server Error", ["Something went wrong while registering user.", error.message]));
     }
 });
+
+export const deleteUser = asyncHandler(async (req, res) => {
+    // User must be logged in
+    // when User clicks on delete account button send email with OTP
+    // Validate the OTP 
+    // If OTP is correct - delete the user from DB
+    // Else show the error - Wrong OTP  
+    
+    try {
+        
+    } catch (error) {
+        return res
+            .status(500)
+            .json(new ApiError(500, "Server Error", ["Something went wrong while deleting user.", error.message]));
+    }
+})
